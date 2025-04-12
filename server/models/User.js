@@ -1,9 +1,26 @@
-import mongoose from 'mongoose';
+import mongoose from 'mongoose'
 
 const userSchema = new mongoose.Schema({
-  name: String,
-  email: { type: String, unique: true },
-  createdAt: { type: Date, default: Date.now },
-});
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+})
 
-export default mongoose.models.User || mongoose.model('User', userSchema);
+// This line ensures it only defines the model if it's not already defined
+const User = mongoose.models.User || mongoose.model('User', userSchema)
+
+export default User
