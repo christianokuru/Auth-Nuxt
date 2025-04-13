@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   nuxtApiShield: {
     limit: {
       max: 5,        // maximum requests per duration time, default is 12/duration
-      duration: 108,   // duration time in seconds, default is 108 seconds
+      duration: 60,   // duration time in seconds, default is 108 seconds
       ban: 300,      // 5 minutes ban time in seconds, default is 3600 seconds = 1 hour
     },
     delayOnBan: true , // delay every response with +1sec when the user is banned, default is true
@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     },
      routes: ["/routes/login",]
   },
+
 
   shadcn: {
     /**
@@ -41,5 +42,17 @@ export default defineNuxtConfig({
       // 👇 tell nitro not to try and bundle this
       external: ['ua-parser-js'],
     },
+    "storage": {
+      "shield": {
+        // storage name, you **must** use "shield" as the name
+        "driver": "memory"
+      }
+    },
+    "experimental": {
+      "tasks": true
+    },
+    "scheduledTasks": {
+      "*/15 * * * *": ["shield:clean"] // clean the shield storage every 15 minutes
+    }
   },
 })
