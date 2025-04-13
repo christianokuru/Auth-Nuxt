@@ -31,8 +31,8 @@ const navLinks = [
   
         <!-- Right: Auth Buttons -->
         <div class="flex items-center">
-          <nuxt-link to="/signin" class="text-[#432361] font-[400] text-[16px] leading-[100%] hover:text-[#6b389b] p-[8px] mr-[24px]">
-            Sign In
+          <nuxt-link to="/login" class="text-[#432361] font-[400] text-[16px] leading-[100%] hover:text-[#6b389b] p-[8px] mr-[24px]">
+            LogIn
           </nuxt-link>
           <nuxt-link to="/signup">
             <button-component text="Sign up" />

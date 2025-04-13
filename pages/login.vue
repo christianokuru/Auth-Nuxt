@@ -4,6 +4,6 @@
 
 <template>
   <div>
-    <h1>Signin Page</h1>
+    <h1>login Page</h1>
   </div>
 </template>
