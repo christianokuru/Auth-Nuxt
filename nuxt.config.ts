@@ -17,6 +17,6 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    mongoUri: process.env.MONGO_URI, // only available server-side
+    mongoUri: process.env.MONGODB_URI, // only available server-side
   },
 })
