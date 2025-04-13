@@ -35,4 +35,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     mongoUri: process.env.MONGODB_URI, // only available server-side
   },
+
+  nitro: {
+    externals: {
+      // 👇 tell nitro not to try and bundle this
+      external: ['ua-parser-js'],
+    },
+  },
 })

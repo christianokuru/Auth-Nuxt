@@ -16,6 +16,7 @@
     "nuxt": "^3.16.2",
     "nuxt-api-shield": "^0.8.0",
     "nuxt-auth-utils": "^0.5.19",
+    "ua-parser-js": "^2.0.3",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
     "zod": "^3.24.2"
