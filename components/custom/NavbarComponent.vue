@@ -2,10 +2,10 @@
 import ButtonComponent from '@/components/custom/ButtonComponent.vue'
 
 const navLinks = [
-  { name: 'Discover', route: '/discover' },
-  { name: 'About Us', route: '/about' },
-  { name: 'FAQ', route: '/faq' },
-  { name: 'Contact Us', route: '/contact' }
+  { name: 'Discover', route: '/' },
+  { name: 'About Us', route: '/' },
+  { name: 'FAQ', route: '/' },
+  { name: 'Contact Us', route: '/' }
 ]
 
 </script>
@@ -31,8 +31,8 @@ const navLinks = [
   
         <!-- Right: Auth Buttons -->
         <div class="flex items-center">
-          <nuxt-link to="/login" class="text-[#432361] font-[400] text-[16px] leading-[100%] hover:text-[#6b389b] p-[8px] mr-[24px]">
-            Log In
+          <nuxt-link to="/signin" class="text-[#432361] font-[400] text-[16px] leading-[100%] hover:text-[#6b389b] p-[8px] mr-[24px]">
+            Sign In
           </nuxt-link>
           <nuxt-link to="/signup">
             <button-component text="Sign up" />
