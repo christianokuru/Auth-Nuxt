@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
     const parsedUA = parser.getResult()
     const deviceInfo = `${parsedUA.device?.type || 'desktop'} - ${parsedUA.os?.name || 'Unknown OS'}`
   
-    let loginStatus = 'fail'
+    let loginStatus = 'LOGIN FAILED'
   
     try {
       // Validate body
@@ -40,7 +40,7 @@ export default defineEventHandler(async (event) => {
       const isPasswordValid = await user.comparePassword(password)
       if (!isPasswordValid) throw createError({ statusCode: 401, message: 'Invalid email or password' })
   
-      loginStatus = 'success'
+      loginStatus = 'Sucessfully Logged In'
   
       // Set session
       await setUserSession(event, {
