@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     errorMessage: "Too Many Requests. Try again later",  // error message when the user is banned, default is "Too Many Requests"
     retryAfterHeader: true, // when the user is banned add the Retry-After header to the response, default is false
     log: {
-      path: "logs", // path to the log file, every day a new log file will be created, use "" to disable logging
+      path: "/server/logs", // path to the log file, every day a new log file will be created, use "" to disable logging
       attempts: 10,    // if an IP reach 100 requests, all the requests will be logged, can be used for further analysis or blocking for example with fail2ban, use 0 to disable logging
     },
      routes: ["/routes/login",]
