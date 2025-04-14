@@ -10,7 +10,7 @@ const data = reactive({
 </script>
 
 <template>
-  <div class="w-1/2 mx-auto flex flex-col mt-[110px]">
+  <div class="w-1/2 mx-auto flex flex-col mt-[110px] mb-[130px]">
     <div class="mb-[15px]">
       <h1 class="text-3xl">Create an Account</h1>
     </div>
@@ -25,7 +25,7 @@ const data = reactive({
               name="email"
               placeholder="youremail@gmail.com"
               v-model="data.email"
-              class="border h-[50px] px-3 cursor-pointer"
+              class="border h-[50px] px-3 cursor-pointer rounded-md placeholder:text-lg outline-gray-300"
             />
           </div>
 
@@ -37,6 +37,31 @@ const data = reactive({
               name="username"
               placeholder="Username"
               v-model="data.username"
+              class="border h-[50px] px-3 cursor-pointer rounded-md placeholder:text-lg outline-gray-300"
+            />
+          </div>
+
+          <div class="grid gap-3">
+            <p>Username</p>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+              v-model="data.username"
+              class="border h-[50px] px-3 cursor-pointer rounded-md placeholder:text-lg outline-gray-300"
+            />
+          </div>
+
+          <div class="grid gap-3">
+            <p>Username</p>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+              v-model="data.username"
+              class="border h-[50px] px-3 cursor-pointer rounded-md placeholder:text-lg outline-gray-300"
             />
           </div>
         </div>
