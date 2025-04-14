@@ -7,6 +7,14 @@ const data = reactive({
   password: "",
   confirmPassword: "",
 });
+
+/**
+ * Handles form submission by logging the current state of the form data.
+ */
+
+const submit = () => {
+    console.log(data)
+}
 </script>
 
 <template>
@@ -17,7 +25,7 @@ const data = reactive({
     <div>
       <form @submit="submitForm">
         <div class="grid gap-7 border">
-          <div class="grid gap-3">
+          <div class="grid">
             <p>Email Address</p>
             <input
               type="email"
@@ -29,7 +37,7 @@ const data = reactive({
             />
           </div>
 
-          <div class="grid gap-3">
+          <div class="grid">
             <p>Username</p>
             <input
               type="text"
@@ -41,26 +49,26 @@ const data = reactive({
             />
           </div>
 
-          <div class="grid gap-3">
-            <p>Username</p>
+          <div class="grid">
+            <p>Password</p>
             <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Username"
-              v-model="data.username"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Your Password must be more than 6 characters"
+              v-model="data.password"
               class="border h-[50px] px-3 cursor-pointer rounded-md placeholder:text-lg outline-gray-300"
             />
           </div>
 
-          <div class="grid gap-3">
-            <p>Username</p>
+          <div class="grid">
+            <p>Confirm Password</p>
             <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Username"
-              v-model="data.username"
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Re-type your password"
+              v-model="data.confirmPassword"
               class="border h-[50px] px-3 cursor-pointer rounded-md placeholder:text-lg outline-gray-300"
             />
           </div>
