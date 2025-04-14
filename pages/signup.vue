@@ -72,6 +72,7 @@ const submit = () => {
               class="border h-[50px] px-3 cursor-pointer rounded-md placeholder:text-lg outline-gray-300"
             />
           </div>
+          <button class="mt-7 bg-black text-white h-12 rounded-md font-semibold hover:bg-gray-800">Submit</button>
         </div>
       </form>
     </div>
