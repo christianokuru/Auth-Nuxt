@@ -1,5 +1,12 @@
 <script setup>
 import { reactive } from "vue";
+import {z} from 'zod'
+
+const bodySchema = z.object({
+  email: z.string().email({ message: 'Invalid email' }),
+  username: z.string().min(3, { message: 'Username must be at least 3 characters' }),
+  password: z.string().min(6, { message: 'Password must be at least 6 characters' }),
+});
 
 const data = reactive({
   username: "",
@@ -72,7 +79,7 @@ const submit = () => {
               class="border h-[50px] px-3 cursor-pointer rounded-md placeholder:text-lg outline-gray-300"
             />
           </div>
-          <button class="mt-7 bg-black text-white h-12 rounded-md font-semibold hover:bg-gray-800">Submit</button>
+          <button type="submit" class="mt-7 bg-black text-white h-12 rounded-md font-semibold hover:bg-gray-800">Submit</button>
         </div>
       </form>
     </div>
